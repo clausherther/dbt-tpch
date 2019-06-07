@@ -41,6 +41,7 @@ select
     (base_price * (1 - l.discount_percentage)){{ money() }} as discounted_price,
 
     l.extended_price as gross_item_sales_amount,
+    (l.extended_price * (1 - l.discount_percentage)){{ money() }} as discounted_item_sales_amount,
     -- We model discounts as negative amounts
     (-1 * l.extended_price * l.discount_percentage){{ money() }} as item_discount_amount,
     l.tax_rate,

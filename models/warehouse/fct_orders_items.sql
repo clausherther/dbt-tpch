@@ -38,9 +38,11 @@ final as (
         o.discounted_price,
         o.tax_rate,
         
+        1 as order_item_count,
         o.quantity,
 
         o.gross_item_sales_amount,
+        o.discounted_item_sales_amount,
         o.item_discount_amount,
         o.item_tax_amount,
         o.net_item_sales_amount
