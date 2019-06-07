@@ -10,11 +10,11 @@ The project is laid out as follows:
 - `_source` contains source definitions
 - `base` contains `ephemeral` base models that serve as wrappers around source models to define column names and data types where necessary
 - `ods` represents an Operational Data Store (ODS), i.e. a mostly normalized view of the data. These models may contain more columns than we may choose to publish to the dimensional data warehouse, but don't contain any reporting models.
-- `wh` represents the Dimensional Data Warehouse (WH). These models use a star schema methodology made of fact (`fct_*`) and dimension (`dim_*`) tables. In addition, this schema contains report models (`rpt_*`) that combine fact and dimension tables for business reporting.
+- `wh` represents the Dimensional Data Warehouse (WH). These models use a star schema methodology made up of fact (`fct_*`) and dimension (`dim_*`) tables. In addition, this schema contains report models (`rpt_*`) that combine fact and dimension tables for business reporting.
 
 
 
-## To Start
+## Profile
 - Add a new profile to `~/.dbt/profiles.yml` called `tpch`.
 
 ```
@@ -44,6 +44,11 @@ tpch:
             schema: <default_schema>
 ```
 
+## Packages
+
+This project make use of the [dbt_utils](https://github.com/fishtown-analytics/dbt-utils) package, so you will need to call `dbt deps` before running any model to ensure dbt can combile all package macros.
+
+
 ## Scaling Factor
 
 
@@ -61,10 +66,9 @@ sources:
 ...
 
 ```
+## Snowflake Usage
 
-## Packages
-
-This project make use of the [dbt_utils](https://github.com/fishtown-analytics/dbt-utils) package, so you will need to call `dbt deps` before running any model to ensure dbt can combile all package macros.
+Using an X-Small warehouse (1 credit / hour), the project currently runs in about *5 minutes* against the `TPCH_SF10` database.
 
 ---
 - [What is dbt](https://dbt.readme.io/docs/overview)?
