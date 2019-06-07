@@ -2,7 +2,7 @@
 # Name your package! Package names should contain only lowercase characters
 # and underscores. A good package name should reflect your organization's
 # name or the intended use of these models
-name: 'dbt_tcp'
+name: 'dbt_tpch'
 version: '1.0'
 
 source-paths: ["models"]
@@ -16,7 +16,7 @@ clean-targets:         # directories to be removed by `dbt clean`
     - "target"
     - "dbt_modules"
 
-profile: tcp
+profile: tpch
 
 require-dbt-version: ">=0.13.1"
 
@@ -26,7 +26,7 @@ quoting:
     schema: false
 
 models:
-  dbt_tcp:
+  dbt_tpch:
 
       vars:
         max_ship_date: "'1998-12-01'"
