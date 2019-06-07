@@ -12,7 +12,7 @@ select
     s.supplier_key,
     s.supplier_name,
     s.supplier_address,
-    s.supplier_nation_key,
+    s.nation_key,
     s.supplier_phone_number,
     s.supplier_account_balance
 from

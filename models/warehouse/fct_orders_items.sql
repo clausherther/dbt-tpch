@@ -8,6 +8,11 @@ with orders_items as (
     select * from {{ ref('orders_items')}}
 
 ),
+parts_suppliers as (
+    
+    select * from {{ ref('parts_suppliers')}}
+
+),
 final as (
     select 
 
@@ -26,17 +31,21 @@ final as (
         o.commit_date,
         o.receipt_date,
         o.ship_mode_name,
+        ps.retail_price,
+        ps.supplier_cost_amount,
 
         o.quantity,
-        
         o.extended_price,
-
         o.discount_amount,
         o.tax_amount,
         o.total_amount
 
     from
         orders_items o
+        join
+        parts_suppliers ps
+            on o.part_key = ps.part_key and
+                o.supplier_key = ps.supplier_key
 )
 select 
     f.*,

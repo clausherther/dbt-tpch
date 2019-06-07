@@ -33,7 +33,7 @@ select
 
     s.supplier_key,
     s.supplier_name,
-    s.supplier_nation_key,
+    s.nation_key,
 
     ps.supplier_availabe_quantity,
     ps.supplier_cost_amount
