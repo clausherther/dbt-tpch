@@ -9,7 +9,7 @@ select
     s_address as supplier_address,
     s_nationkey as nation_key,
     s_phone as supplier_phone_number,
-    s_acctbal as supplier_account_balance,
+    s_acctbal{{ money() }} as supplier_account_balance,
     s_comment as supplier_comment
 from
     {{ source('tcph', 'supplier') }}

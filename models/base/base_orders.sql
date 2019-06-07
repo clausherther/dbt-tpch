@@ -7,7 +7,7 @@ select
     o_orderkey as order_key, 
     o_custkey as customer_key,
     o_orderstatus as order_status_code,
-    o_totalprice as order_amount,
+    o_totalprice{{ money() }} as order_amount,
     o_orderdate as order_date,
     o_orderpriority as order_priority_code,
     o_clerk as order_clerk_name,

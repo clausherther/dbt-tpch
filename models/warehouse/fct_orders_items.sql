@@ -31,14 +31,19 @@ final as (
         o.commit_date,
         o.receipt_date,
         o.ship_mode_name,
-        ps.retail_price,
         ps.supplier_cost_amount,
-
+        {# ps.retail_price, #}
+        o.base_price,
+        o.discount_percentage,
+        o.discounted_price,
+        o.tax_rate,
+        
         o.quantity,
-        o.extended_price,
-        o.discount_amount,
-        o.tax_amount,
-        o.total_amount
+
+        o.gross_item_sales_amount,
+        o.item_discount_amount,
+        o.item_tax_amount,
+        o.net_item_sales_amount
 
     from
         orders_items o
