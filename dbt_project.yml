@@ -31,7 +31,6 @@ models:
       base:
         schema: base
       ods:
-        tcph:
-          schema: ods
+        schema: ods
       warehouse:
-        schema: warehouse
+        schema: wh
