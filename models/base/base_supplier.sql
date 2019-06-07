@@ -12,4 +12,4 @@ select
     s_acctbal{{ money() }} as supplier_account_balance,
     s_comment as supplier_comment
 from
-    {{ source('tcph', 'supplier') }}
+    {{ source('tpch', 'supplier') }}

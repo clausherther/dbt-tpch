@@ -14,4 +14,4 @@ select
     o_shippriority as shipping_priority,
     o_comment as order_comment
 from
-    {{ source('tcph', 'orders') }}
+    {{ source('tpch', 'orders') }}

@@ -1,7 +1,7 @@
 version: 2
 
 sources:
-  - name: tcph
+  - name: tpch
     database: SNOWFLAKE_SAMPLE_DATA
     schema: TPCH_SF10
     loader: Snowflake
