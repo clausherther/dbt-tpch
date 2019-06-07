@@ -27,7 +27,10 @@ quoting:
 
 models:
   dbt_tcp:
-      # Applies to all files under models/example/
+
+      vars:
+        max_ship_date: "'1998-12-01'"
+
       base:
         schema: base
       ods:
