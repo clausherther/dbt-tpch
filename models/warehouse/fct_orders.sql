@@ -37,6 +37,7 @@ final as (
         o.order_clerk_name,
         o.shipping_priority,
                 
+        1 as order_count,                
         s.gross_item_sales_amount,
         s.item_discount_amount,
         s.item_tax_amount,
