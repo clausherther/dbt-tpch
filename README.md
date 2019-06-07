@@ -1,6 +1,6 @@
 # dbt TPC-H Sample
 
-This is a dbt sample project for Snowflake using the `TPC-H` example dataset that ships as shared databases with Snowflake.
+This is a dbt sample project for Snowflake using the `TPC-H` example dataset that ships as a shared database with Snowflake.
 
 More details can be found on the [TPC website](http://www.tpc.org/tpch/default.asp) and in the [specification document](http://www.tpc.org/tpc_documents_current_versions/pdf/tpc-h_v2.18.0.pdf).
 
