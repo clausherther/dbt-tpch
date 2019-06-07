@@ -1,5 +1,5 @@
 ### dbt-tcp
-This is dbt sample project for Snowflake using the `TPCDS_SF100TCL` dataset that ships as a shared database with Snowflake.
+This is dbt sample project for Snowflake using the `TCPH` example dataset that ship as shared databases with Snowflake.
  
 ---
 - [What is dbt](https://dbt.readme.io/docs/overview)?

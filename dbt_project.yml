@@ -16,7 +16,7 @@ clean-targets:         # directories to be removed by `dbt clean`
     - "target"
     - "dbt_modules"
 
-profile: dw-snow
+profile: tcp
 
 require-dbt-version: ">=0.13.1"
 
@@ -29,5 +29,9 @@ models:
   dbt_tcp:
       # Applies to all files under models/example/
       base:
+        schema: base
       ods:
+        tcph:
+          schema: ods
       warehouse:
+        schema: warehouse
