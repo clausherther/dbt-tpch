@@ -35,5 +35,5 @@ models:
         schema: base
       ods:
         schema: ods
-      warehouse:
+      wh:
         schema: wh
