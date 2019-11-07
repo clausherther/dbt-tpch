@@ -5,12 +5,12 @@
 }}
 with orders as (
     
-    select * from {{ ref('base_orders')}}
+    select * from {{ ref('base_orders') }}
 
 ),
 line_items as (
 
-    select * from {{ ref('base_line_item')}}
+    select * from {{ ref('base_line_item') }}
 
 )
 select 

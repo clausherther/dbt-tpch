@@ -5,7 +5,7 @@
 }}
 with nations as (
 
-    select * from {{ ref('base_nation')}}
+    select * from {{ ref('base_nation') }}
 
 )
 select 

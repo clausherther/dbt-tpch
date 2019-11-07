@@ -5,7 +5,7 @@
 }}
 with suppliers as (
 
-    select * from {{ ref('base_supplier')}}
+    select * from {{ ref('base_supplier') }}
 
 )
 select 

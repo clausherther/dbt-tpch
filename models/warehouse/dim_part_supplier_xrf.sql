@@ -5,26 +5,26 @@
 }}
 with suppliers as (
 
-    select * from {{ ref('suppliers')}}
+    select * from {{ ref('suppliers') }}
 
 ),
 parts as (
     
-    select * from {{ ref('parts')}}
+    select * from {{ ref('parts') }}
 
 ),
 parts_suppliers as (
 
-    select * from {{ ref('parts_suppliers')}}
+    select * from {{ ref('parts_suppliers') }}
 
 ),
 nations as (
 
-    select * from {{ ref('nations')}}
+    select * from {{ ref('nations') }}
 ),
 regions as (
 
-    select * from {{ ref('regions')}}
+    select * from {{ ref('regions') }}
 
 ),
 final as (

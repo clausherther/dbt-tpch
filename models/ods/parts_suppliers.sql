@@ -5,17 +5,17 @@
 }}
 with parts as (
     
-    select * from {{ ref('parts')}}
+    select * from {{ ref('parts') }}
 
 ),
 suppliers as (
 
-    select * from {{ ref('suppliers')}}
+    select * from {{ ref('suppliers') }}
 
 ),
 part_suppliers as (
 
-    select * from {{ ref('base_part_supplier')}}
+    select * from {{ ref('base_part_supplier') }}
 
 )
 select 

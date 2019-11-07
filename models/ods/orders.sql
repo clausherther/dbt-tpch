@@ -5,7 +5,7 @@
 }}
 with orders as (
 
-    select * from {{ ref('base_orders')}}
+    select * from {{ ref('base_orders') }}
 
 )
 select 

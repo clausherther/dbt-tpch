@@ -5,16 +5,16 @@
 }}
 with customers as (
 
-    select * from {{ ref('customers')}}
+    select * from {{ ref('customers') }}
 
 ),
 nations as (
 
-    select * from {{ ref('nations')}}
+    select * from {{ ref('nations') }}
 ),
 regions as (
 
-    select * from {{ ref('regions')}}
+    select * from {{ ref('regions') }}
 
 ),
 final as (
