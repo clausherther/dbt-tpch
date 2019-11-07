@@ -1,4 +1,4 @@
-{% macro generate_schema_name_for_env(custom_schema_name=none) -%}
+{%- macro generate_schema_name_for_env(custom_schema_name=none) -%}
     {%- set default_schema = target.schema -%}
     {%- if (( target.name == 'prod' or
               target.name == 'dev' or
@@ -8,8 +8,8 @@
     {%- else -%}
         {{ default_schema }}
     {%- endif -%}
-{%- endmacro %}
+{%- endmacro -%}
 
-{% macro generate_schema_name(schema_name) -%}
+{%- macro generate_schema_name(schema_name, node) -%}
     {{ generate_schema_name_for_env(schema_name) }}
-{%- endmacro %}
+{%- endmacro -%}
