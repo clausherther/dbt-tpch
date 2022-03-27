@@ -2,14 +2,7 @@ version: 2
 
 sources:
   - name: tpch
-    database: SNOWFLAKE_SAMPLE_DATA
-    schema: TPCH_SF10
-    loader: Snowflake
-    
-    quoting:
-      database: false
-      schema: false
-      identifier: false
+    database: tpch
       
     tables:
       - name: customer
