@@ -1,6 +1,8 @@
 {{
     config(
-        materialize='table'
+        materialize='table',
+        schema='wh',
+        file_format='delta'
     )
 }}
 

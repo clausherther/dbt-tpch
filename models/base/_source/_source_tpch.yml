@@ -2,8 +2,7 @@ version: 2
 
 sources:
   - name: tpch
-    database: tpch
-      
+     
     tables:
       - name: customer
       - name: lineitem

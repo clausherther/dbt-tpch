@@ -1,0 +1,21 @@
+version: 2
+
+models:
+    - name : dim_customer
+      description : This is a Customer Dimension based on Customer table from ODS
+
+
+      columns:
+        - name: customer_key
+          description: This is a primary key
+
+          tests:
+            - unique
+            - not_null 
+
+
+
+
+
+
+      

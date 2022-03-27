@@ -1,0 +1,18 @@
+version: 2
+
+models:
+    - name : orders
+      description : This is a Orders Table
+
+      columns:
+        - name: order_key
+          description: This is the primary key of the table
+          tests:
+            - unique
+            - not_null
+
+        - name: order_status_code
+          description: Order Status Code, valid values are F, O, P
+          tests:
+            - accepted_values:
+                values: ['F', 'O','P']
