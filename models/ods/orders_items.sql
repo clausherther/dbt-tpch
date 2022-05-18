@@ -38,18 +38,18 @@ select
     -- so we back out the extended price per item
     (l.extended_price/nullif(l.quantity, 0)){{ money() }} as base_price,
     l.discount_percentage,
-    (base_price * (1 - l.discount_percentage)){{ money() }} as discounted_price,
+    ((l.extended_price/nullif(l.quantity, 0)) * (1 - l.discount_percentage)){{ money() }} as discounted_price,
 
     l.extended_price as gross_item_sales_amount,
     (l.extended_price * (1 - l.discount_percentage)){{ money() }} as discounted_item_sales_amount,
     -- We model discounts as negative amounts
     (-1 * l.extended_price * l.discount_percentage){{ money() }} as item_discount_amount,
     l.tax_rate,
-    ((gross_item_sales_amount + item_discount_amount) * l.tax_rate){{ money() }} as item_tax_amount,
+    ((l.extended_price + (-1 * l.extended_price * l.discount_percentage)) * l.tax_rate){{ money() }} as item_tax_amount,
     (
-        gross_item_sales_amount + 
-        item_discount_amount + 
-        item_tax_amount
+        l.extended_price + 
+        (-1 * l.extended_price * l.discount_percentage) + 
+        ((l.extended_price + (-1 * l.extended_price * l.discount_percentage)) * l.tax_rate)
     ){{ money() }} as net_item_sales_amount
 
 from

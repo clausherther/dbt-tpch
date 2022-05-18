@@ -3,7 +3,9 @@
 # and underscores. A good package name should reflect your organization's
 # name or the intended use of these models
 name: 'dbt_tpch'
-version: '1.0'
+version: '1.0.0'
+config-version: 2
+profile: 'default'
 
 source-paths: ["models"]
 analysis-paths: ["analysis"] 
@@ -29,7 +31,7 @@ models:
   dbt_tpch:
 
       vars:
-        max_ship_date: "'1998-12-01'"
+        max_ship_date: '1998-12-01'
 
       base:
         schema: base
